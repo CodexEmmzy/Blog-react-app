@@ -22,7 +22,7 @@ const Create = () => {
             else {
                 setIsLoading(true)
                 setWork(false)
-                fetch('http://localhost:1000/blogs', {
+                fetch('https://cors-anywhere.herokuapp.com/corsdemo/http://localhost:1000/blogs', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(blog)

@@ -3,10 +3,10 @@ import useFetch from "./useFetch";
 
 const BlogDetails = () => {
     const { id } = useParams();
-    const { data: blog, error, isLoading } = useFetch('http://localhost:1000/blogs/' + id)
+    const { data: blog, error, isLoading } = useFetch('https://cors-anywhere.herokuapp.com/corsdemo/http://localhost:1000/blogs' + id)
     const history = useHistory()
     const handleClick = () => {
-        fetch('http://localhost:1000/blogs/' + blog.id, {
+        fetch('https://cors-anywhere.herokuapp.com/corsdemo/http://localhost:1000/blogs' + blog.id, {
             method: 'DELETE'
         }).then(() => {
             history.push('/')
